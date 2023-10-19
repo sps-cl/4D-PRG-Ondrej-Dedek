@@ -5,12 +5,12 @@ namespace console_game
         public Cactus(Vector position) : base(position)
         {
             Image = new Image(new string[,] {
-                { "# ", "# ", " ", "# ", "# "},
-                { "# ", "# ", " ", "# ", "# "},
+                { "# ", "# ", "  ", "# ", "# "},
+                { "# ", "# ", "  ", "# ", "# "},
                 { "# ", "# ", "# ", "# ", "# "},
-                { "# ", "# ", "# ", "# ", " "},
-                { " ", "# ", "# ", " ", " "},
-                { " ", "# ", "# ", " ", " "}}, Position);
+                { "# ", "# ", "# ", "# ", "  "},
+                { "  ", "# ", "# ", "  ", "  "},
+                { "  ", "# ", "# ", "  ", "  "}}, Position);
             Collider = new RectCollider(Position, Image.Width, Image.Height);
             Speed = new Vector(-1.4f, 0);
         }
