@@ -35,6 +35,7 @@ namespace console_game
                 };
             obstacle2.OnDestroy = onObstacle2Destroy;
 
+            TextBox scoreCounter = new TextBox(new Vector(_sceneWidth - 15, 0), 15, 3);
             int score = 0;
 
             while (true)
@@ -48,7 +49,8 @@ namespace console_game
                 obstacle1.Move();
                 obstacle2.Move();
 
-                scene.Draw(player, obstacle1, obstacle2);
+                scoreCounter.UpdateText($"Score: {score}");
+                scene.Draw(player, obstacle1, obstacle2, scoreCounter);
 
                 if (player.CollideWith(obstacle1.Collider) || player.CollideWith(obstacle2.Collider)) break;
                 score++;
